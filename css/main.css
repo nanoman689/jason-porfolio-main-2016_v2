@@ -1,3 +1,7 @@
+* { 
+    margin: 0; 
+}
+
 html,
 body {
     width: 100%;
@@ -7,6 +11,31 @@ body {
 
 a {
     text-decoration: none;
+}
+
+/* h1, h2, h3, h4, h5, p */
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    color:white;
+    font-size: 28px;
+    padding: 10px;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    color:white;
+    font-size:20px;
+    padding: 20px;
 }
 
 /* Parallax */
@@ -33,7 +62,57 @@ a {
     z-index: 1;
 }
 
+.parallaxMiddle {
+    height: 100%;
+    background-color: chocolate;
+}
+
 .parallaxBottom {
     height: 100%;
+    background-color: darkgray;
 }
+
+/* Intro Section - Top */
+.introTop {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 14%;
+}
+img.jasonLogo {
+    fill: #94d31b;
+    width: 10%;
+}
+ul {
+    padding-top:10px;
+    list-style-type: none;
+    -webkit-padding-start: 0;
+}
+li {
+    display: inline;
+}
+
+.fa {
+    color:white;   
+}
+
+hr {
+    margin: 0 auto;
+    width: 25%;
+    border-top: 1px double #8c8b8b;
+}
+
+/* Demo Sites - Middle */
+.demoSites {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 14%;
+}
+
+/* Bottom Section - Bottom */
+.contactInfo {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 14%;
+}
+
 
