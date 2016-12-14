@@ -20,6 +20,13 @@
 
 <body>
     <div class="parallaxTop">
+        <header class="large">
+            <ul class="headerUl">
+                <li class="headerUl"><h3>home</h3></li>
+                <li class="headerUl"><h3>contact</h3></li>
+                <li class="headerUl"><h3>some other thing</h3></li>
+            </ul>
+        </header>
         <div class="introTop">
             <img class="jasonLogo" src="img/jason_Logo_solo.svg" alt="Jason Main Logo">
             <h1>Introduction</h1>
@@ -48,16 +55,83 @@
     <div class="parallaxMiddle">
         <div class="demoSites">
             <div class="vlineMid"></div>
-            <h1>Two - Demo Sites</h1>
-            <h2>Some other text goes here.</h2>
+            <h1>Demo Sites</h1>
+            <h2>Some Examples of the work I have done.</h2>
+            <div class="grid">
+                <div class="col1">
+                    <div class="projects">
+                        <h2>Jaybird Gallery</h2><br>
+                        <a href="http://nanoman689.github.io/jaybird_photo/app/index.html#/"><img src="./img/preview/01_jay_bird_photo_v2_750x120.png"></a><br>
+                        <div class="projects-text">
+                        <h3>In this project I took the Flickr API and set it so you can log in and look at your own images with a gallery I built. You can also look at some preset galleries if you don't want to log in.</h3><br>
+                        <ul class="languages">
+                            <li><i class="s-icons fa fa-css3 fa-fw fa-2x" aria-hidden="true"></i></li>
+                            <li><i class="s-icons fa fa-html5 fa-fw fa-2x" aria-hidden="true"></i></li>
+                            <li><img class="angularLogo fa-fw fa-2x" src="img/angular.svg" alt="Angular Logo"></li>
+                        </ul>    
+                        </div>   
+                    </div> 
+                    <hr> 
+                </div>
+                <div class="col2">
+                    <div class="projects">
+                        <h2>Countries and Capitals</h2>
+                        <a href="http://jasonlikestocode.com/countries/#/"><img src="./img/preview/02_countries_and_capitals_v2_750x120.png"></a><br>
+                        <div class="projects-text">
+                        <h3>In this project, I had to take an existing database and display the information on a website. This was one of my first larger projects to use Angluar JS.</h3><br>
+                        <ul class="languages">
+                            <li><i class="s-icons fa fa-css3 fa-fw fa-2x" aria-hidden="true"></i></li>
+                            <li><i class="s-icons fa fa-html5 fa-fw fa-2x" aria-hidden="true"></i></li>
+                            <li><img class="angularLogo fa-fw fa-2x" src="img/angular.svg" alt="Angular Logo"></li>
+                        </ul> 
+                        </div>  
+                    </div>
+                    <hr>
+                </div>
+                <div class="col3">
+                    <div class="projects">
+                        <h2>Movie Search 3000!</h2>
+                        <a href="http://nanoman689.github.io/movieDatabase3000/#/"><img src="./img/preview/movieSearch_preview_750x120.png"></a><br>
+                        <div class="projects-text">
+                        <h3>This project is using two different movie database APIs to do movie and actor searches.</h3><br>
+                        <ul class="languages">
+                            <li><i class="s-icons fa fa-css3 fa-fw fa-2x" aria-hidden="true"></i></li>
+                            <li><i class="s-icons fa fa-html5 fa-fw fa-2x" aria-hidden="true"></i></li>
+                            <li><img class="angularLogo fa-fw fa-2x" src="img/angular.svg" alt="Angular Logo"></li>
+                        </ul> 
+                        </div>   
+                    </div>
+                    <hr>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="parallaxBottom">
-        <div class="contactInfo">
-            <h1>Three - Contact Information</h1>
-            <h2>Some other text goes here.</h2>
+    <footer>
+        <div class="number">
+          <h1>Number Facts</h1>
+            <div class="module-text">Enter a four digit number below to find out an interesting fact about that number.</div>
+            <form id="numberTarget">
+              <input type="number" name="userNumber" id="userNumber" class="text" maxlength="4" autocomplete="off" placeholder="Enter a number!" required /><button name="submitButton" class="submitButton" type="submitButton" enabled>Submit</button>
+            </form>
+
+            <h4>
+
+            </h4>
+            <ul class="resetButton">
+
+            </ul>
+            <script src="js/numberApp.js"></script>
+        </div>  
+        <div>
+            <ul>
+                <li><a id="contact" href="mailto:jason@jasonlikestocode.com?Subject=Hello%20Jason" target="_top" >Contact Me</a></li> 
+
+            </ul>
+            <h2>jason@jasonlikestocode.com</h2>
+
         </div>
-    </div>
-    
+        
+
+    </footer>
     
 </body>

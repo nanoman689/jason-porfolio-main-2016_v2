@@ -1,5 +1,8 @@
-* { 
+*, *:after, *:before { 
     margin: 0; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
@@ -11,6 +14,13 @@ body {
 
 a {
     text-decoration: none;
+}
+
+header,nav, a, img, li{
+  transition: all 0.25s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
 }
 
 /* h1, h2, h3, h4, h5, p */
@@ -45,23 +55,39 @@ h2 {
     font-weight: 100;
     color:white;
     font-size:20px;
-    padding: 20px;
+    padding: 10px;
+}
+
+h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    color:white;
+    font-size:20px;
+    padding: 10px;
+}
+
+h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    color:white;
+    font-size:18px;
+    padding: 5px;
 }
 
 /* Parallax */
 
 .parallaxTop {
-    background: url("../img/N300Sx2.jpeg");
+    background: url("../img/N300Sx2.jpeg");    
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     z-index: -1;
     height: inherit;
 }
 
 .parallaxTop:after {
+    background-color: rgba(0, 0, 0, 0.5);
     display: block;
     position: absolute;
     top: 0;
@@ -73,8 +99,21 @@ h2 {
 }
 
 .parallaxMiddle {
-    height: 100%;
-    background-color: chocolate;
+    background: url("../img/landmark-fog-golden-gate-bridge-san-francisco.png"); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.parallaxMiddle:before {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  background: rgba(255, 0, 0, 0.5);
 }
 
 .parallaxBottom {
@@ -84,9 +123,11 @@ h2 {
 
 /* Intro Section - Top */
 .introTop {
+    position: relative;
     margin: 0 auto;
     text-align: center;
-    padding-top: 9%;
+    padding-top: 2%;
+    z-index: 3;
 }
 img.jasonLogo {
     fill: #94d31b;
@@ -110,8 +151,42 @@ li {
 
 hr {
     margin: 0 auto;
-    width: 400px;
+    width: 85%;
     border-top: 1px double #8c8b8b;
+}
+
+header.large {
+    z-index: 3;
+    background: blue;
+    border-bottom: 1px;
+
+}
+
+ul.headerUl {
+    display: flex;
+    text-align: center;
+    width: 75%;
+}
+
+.headerUl {
+    margin: 0 auto;
+
+}
+/* Sizes for the bigger menu */
+
+header.large{ 
+    height: 75px; 
+}
+header.large li{
+    margin-top: 10px; 
+}
+
+/* Sizes for the smaller menu */
+header.small{ 
+    height: 25px; 
+}
+header.small li{ 
+    margin-top: 17px; 
 }
 
 .about {
@@ -121,7 +196,7 @@ hr {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   line-height: 20px;
-  width: 560px;
+  width: 725px;
   margin: 0 auto; 
   margin-bottom: 20px;  
   margin-top: 20px;  
@@ -166,10 +241,65 @@ hr {
     display: block;
     width:0px;
     top: 10px;
-    height:100px;
+    height:20px;
     border-left: 1px solid white;
     margin: 0 auto;
 }
+
+.grid{
+  display: flex;
+  flex-direction: column;    
+}
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+  float: left;
+}
+
+[class*='col-'] {
+  padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+.col1 {
+  flex: 1;
+  
+}
+.col2 {
+  flex: 1;
+  
+}
+.col3 {
+  flex: 1;
+  
+}
+
+/* Projects */
+
+.projects {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.projects-text {
+    width: 82%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.s-icons {
+    position: relative;
+    bottom: 10px;
+}
+
 
 /* Bottom Section - Bottom */
 .contactInfo {
@@ -178,4 +308,34 @@ hr {
     padding-top: 14%;
 }
 
+/* footer */
 
+footer {
+  background: #b3b3b3;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px; 
+}
+
+button.btn {
+  padding: 10px;  
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+button.resetButton {
+    height: 35px;
+    width: 280px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size:1.1em;
+    color:#2085a3;
+}
+
+.module-text {
+  border-top:dotted 1px; 
+  padding-top:1em;    
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  padding: 20px;    
+}
